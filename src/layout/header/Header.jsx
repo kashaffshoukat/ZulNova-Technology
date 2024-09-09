@@ -1,11 +1,13 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { GiHamburgerMenu, GiCancel } from "react-icons/gi";
 import Button from "../../components/Button";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [hasShadow, setHasShadow] = useState(false);
+  const location = useLocation(); // Get the current location
+
   const navLinks = [
     { name: "Services", to: "/services" },
     { name: "Team", to: "/team" },
@@ -36,7 +38,13 @@ const Header = () => {
     >
       <div className="container mx-auto flex justify-between items-center py-4">
         <div className="flex items-center space-x-2">
-          <img src="/assets/Logo.webp" alt="Logo" className="w-16" />
+          <Link to="/">
+            <img
+              src="/assets/Logo.webp"
+              alt="Logo"
+              className="w-16 cursor-pointer"
+            />
+          </Link>
         </div>
 
         <div className="flex items-center md:hidden">
@@ -61,10 +69,20 @@ const Header = () => {
             <Link
               key={index}
               to={link.to}
-              className="relative group text-xl font-semibold hover:text-yellow-400 transition duration-300"
+              className={`relative group text-xl transition duration-300 ${
+                location.pathname === link.to
+                  ? "text-yellow-400"
+                  : "hover:text-yellow-400"
+              }`}
             >
               {link.name}
-              <span className="absolute left-0 -bottom-1 w-full h-0.5 bg-yellow-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+              <span
+                className={`absolute left-0 -bottom-1 w-full h-0.5 bg-yellow-400 transform transition-transform duration-300 ${
+                  location.pathname === link.to
+                    ? "scale-x-100"
+                    : "scale-x-0 group-hover:scale-x-100"
+                }`}
+              ></span>
             </Link>
           ))}
         </nav>

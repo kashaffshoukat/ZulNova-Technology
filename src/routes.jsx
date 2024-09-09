@@ -5,6 +5,7 @@ import Team from "./views/Team/Team";
 import Careers from "./views/Careers/Careers";
 import JobApplication from "./views/Careers/JobApplication";
 import ContactUs from "./views/ContactUs/ContactUs";
+import Services from "./views/Services/Services";
 
 export default function Router() {
   let element = useRoutes([
@@ -29,6 +30,10 @@ export default function Router() {
         {
           path: "/contact-us",
           element: <ContactUs />,
+        },
+        {
+          path: "/services",
+          element: <Services />,
         },
       ],
     },
