@@ -1,8 +1,13 @@
 import React from 'react'
+import TopSectionComponent from '../../components/TopSectionComponent'
+import CeoSection from '../../components/CeoSection'
 
 const Team = () => {
     return (
-        <div>Team</div>
+        <>
+        <TopSectionComponent/>
+        <CeoSection/>
+        </>
     )
 }
 

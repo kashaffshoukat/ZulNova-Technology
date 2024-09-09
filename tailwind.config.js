@@ -51,6 +51,7 @@ module.exports = {
         success: "#219653",
         danger: "#D34053",
         warning: "#FFA70B",
+        
       },
       opacity: {
         65: ".65",
