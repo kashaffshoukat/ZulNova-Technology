@@ -14,9 +14,9 @@ const Footer = () => {
         </div>
       </div>
       <div className="px-6">
-        <hr class="text-white w-full" />
+        <hr className="text-white w-full" />
       </div>
-      <div className="container mx-auto py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="container mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
           <p className="mt-4">
             Saeedan Technology is a leading software development company located
