@@ -32,8 +32,20 @@ import blogpic from './web-app.png'
 import avatar from './836.jpg'
 import zubairp from './zubairp.jpg'
 import mads from './web.png'
+import fiver from './fiver.png'
+import upwork from './upp.png'
+import google from './google.png'
+import logo1 from './logo1.png'
+import logo2 from './logo2.png'
+import logo3 from './logo3.png'
+import logo4 from './logo4.png'
+import logo5 from './logo5.png'
+import logo6 from './logo6.png'
+
+
+
 
 export {
     teampic,teamAll,bgPint,atif,rohan,pmbg,mudasser,anas,amir,moaz,ali,salam,hamza,daniyal,usama,shahbaz,zubair,murtaza,haseeb,fida,react,laravel,react2,hamzabg,python
-    ,salambg,amirbg,wajidbg,wajid,irfan,blogpic,avatar,zubairp,mads
+    ,salambg,amirbg,wajidbg,wajid,irfan,blogpic,avatar,zubairp,mads,fiver,upwork,google,logo1,logo2,logo3,logo4,logo5,logo6
 }
