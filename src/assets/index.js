@@ -32,8 +32,9 @@ import blogpic from './web-app.png'
 import avatar from './836.jpg'
 import zubairp from './zubairp.jpg'
 import mads from './web.png'
+import service from './service.jpg'
 
 export {
-    teampic,teamAll,bgPint,atif,rohan,pmbg,mudasser,anas,amir,moaz,ali,salam,hamza,daniyal,usama,shahbaz,zubair,murtaza,haseeb,fida,react,laravel,react2,hamzabg,python
-    ,salambg,amirbg,wajidbg,wajid,irfan,blogpic,avatar,zubairp,mads
+    teampic, teamAll, bgPint, atif, rohan, pmbg, mudasser, anas, amir, moaz, ali, salam, hamza, daniyal, usama, shahbaz, zubair, murtaza, haseeb, fida, react, laravel, react2, hamzabg, python
+    , salambg, amirbg, wajidbg, wajid, irfan, blogpic, avatar, zubairp, mads, service
 }
