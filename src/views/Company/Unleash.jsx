@@ -3,7 +3,7 @@ const Unleash = () => {
   return (
     <div className=" bg-primary pb-14 pt-4">
       <div className="flex flex-col items-center gap-7 py-[10px] px-[20px] text-center text-white ">
-        <div className="flex flex-col gap-4 items-center ">
+        <div className="flex flex-col gap-2 md-gap-3 lg:gap-4 items-center ">
           <h1 className="text-2xl md:text-3xl lg:text-5xl">
             Unleash Your potential with us
           </h1>
