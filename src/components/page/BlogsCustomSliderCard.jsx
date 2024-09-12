@@ -12,5 +12,5 @@ const BlogsCustomSliderCard = ({heading1,heading2}) => {
 </div>
   )
 }
-
+ 
 export default BlogsCustomSliderCard
