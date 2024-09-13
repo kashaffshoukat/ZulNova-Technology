@@ -19,7 +19,7 @@ const TopSectionComponent = ({ head1, head2, head3, description, picture, button
             {buttonComponent}
           </div>
         </div>
-
+         
         <div className="relative">
           <div className="absolute -right-4 md:-right-7 top-4 lg:top-8 bg-red-500 w-10 md:w-14 h-10 md:h-14 rounded-full"></div>
           <img

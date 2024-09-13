@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { GiHamburgerMenu, GiCancel } from "react-icons/gi";
-import Button from "../../components/Button";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [hasShadow, setHasShadow] = useState(false);
-  const location = useLocation(); // Get the current location
+  const location = useLocation();
 
   const navLinks = [
     { name: "Services", to: "/services" },
@@ -15,7 +14,7 @@ const Header = () => {
     { name: "Portfolio", to: "/portfolio" },
     { name: "Careers", to: "/careers" },
     { name: "Blog", to: "/blog" },
-    { name: "WebDevelopmentServices", to: "/WebDevelopmentServices" },
+    // { name: "WebDevelopmentServices", to: "/WebDevelopmentServices" },
   ];
 
   useEffect(() => {

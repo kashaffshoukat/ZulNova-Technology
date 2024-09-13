@@ -18,8 +18,8 @@ const MobileAppServices = () => {
       <WebServicesSlider />
       <div className='px-20'>
         <WebServicesCards />
-        {/* <Benefits/> */}
-        {/* <Testimonial/> */}
+        <Benefits/>
+        <Testimonial/>
         <TechnologyStack />
         <MainFeatures />
         <OurProcess />

@@ -6,7 +6,7 @@ const MainTeam = () => {
         <>
             <div className="flex flex-col items-center justify-center gap-4 py-8 md:py-12">
                 <h1 className="text-3xl md:text-5xl font-semibold">
-                    Our <span className="text-[#0A6EB7]">Team</span>
+                    Our <span className="text-[#2e5090]">Team</span>
                 </h1>
                 <h2 className="text-lg md:text-2xl text-center">
                     This is our team, a lot of smiling happy people who work hard to

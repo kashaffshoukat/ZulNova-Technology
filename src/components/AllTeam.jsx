@@ -133,9 +133,9 @@ const data = [
     return (
         <div className='py-12'>
             <h1 className='text-4xl md:text-5xl lg:text-6xl mt-5 font-semibold text-center'>
-                Creatives and &nbsp;<span className='text-[#0A6EB7]'>Professionals</span>
+                Creatives and &nbsp;<span className='text-[#2e5090]'>Professionals</span>
             </h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20 md:gap-10 py-12 md:py-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20 md:gap-14 py-12 md:py-16">
                 {data.map((item, index) => (
                     <div key={index}>
                         <CustomTeamCard

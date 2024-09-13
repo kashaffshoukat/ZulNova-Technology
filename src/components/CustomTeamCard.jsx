@@ -25,7 +25,7 @@ const CustomTeamCard = ({ name, position, Image, backgroundColor,backgroundImage
           />
           <div className='bg-white py-2 px-0 w-full absolute bottom-0 right-0 left-0 text-center shadow-md'>
             <p className='text-lg font-semibold text-left pl-5'>{name}</p>
-            <p className='text-base font-medium text-[#0A6EB7] text-left pl-5'>{position}</p>
+            <p className='text-base font-medium text-[#2e5090] text-left pl-5'>{position}</p>
           </div>
         </div>
       </div>

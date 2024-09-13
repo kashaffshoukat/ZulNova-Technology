@@ -15,12 +15,12 @@ const BlogDetail = () => {
                     using cutting-edge tools and best practices. Get your professional site up and running faster!
                 </p>
                 <div className='flex flex-col md:flex-row gap-4 md:gap-5'>
-                    <h1 className='p-2 bg-[#2e5090] text-white rounded-md'>
+                    <button className='p-2 bg-[#2e5090] text-white rounded-md'>
                         Talk to Expert Now
-                    </h1>
-                    <h1 className='p-2 border border-[#2e5090] font-light text-[#2e5090] rounded-md'>
+                    </button>
+                    <button className='p-2 border border-[#2e5090] font-light text-[#2e5090] rounded-md'>
                         Review Web Development Services
-                    </h1>
+                    </button>
                 </div>
             </div>
             <div className='flex justify-center items-center'>

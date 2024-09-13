@@ -11,12 +11,12 @@ const BlogDetail3 = () => {
           Why struggle with development environments? Our skilled developers will bring your website to life, handling everything from design to deployment. Contact us for a free consultation!
         </p>
         <div className='flex flex-col items-center justify-center mt-3 md:flex-row gap-4 md:gap-6'>
-          <h1 className='p-2 text-sm md:text-base bg-[#2e5090] text-white rounded-md shadow-lg cursor-pointer'>
+          <button className='p-2 text-sm md:text-base bg-[#2e5090] text-white rounded-md shadow-lg cursor-pointer'>
             Talk to Expert Now
-          </h1>
-          <h1 className='p-2 text-sm md:text-base border border-[#2e5090] bg-white font-light text-[#2e5090] rounded-md shadow-lg cursor-pointer'>
+          </button>
+          <button className='p-2 text-sm md:text-base border border-[#2e5090] bg-white font-light text-[#2e5090] rounded-md shadow-lg cursor-pointer'>
             Review Web Development Services
-          </h1>
+          </button>
         </div>
       </div>
     </div>
