@@ -2,7 +2,7 @@ import React from 'react'
 import { blogpic, zubairp } from '../assets';
 import { useNavigate } from 'react-router-dom';
 
-const BlogCustomCard = ({ heading1, heading2, name, position }) => {
+const BlogCustomCard = ({ heading1, heading2, name, position, image }) => {
     const navigate = useNavigate();
 
     const goblogdetail = () => {
@@ -11,7 +11,7 @@ const BlogCustomCard = ({ heading1, heading2, name, position }) => {
 
     return (
         <div className='bg-white p-4 rounded-lg shadow-lg'>
-            <img src={blogpic} alt="" className='h-1/2 w-full object-cover rounded-xl' />
+            <img src={image} alt="" className='h-1/2 w-full object-cover rounded-xl' />
             <p className='text-lg font-semibold text-left mt-2'>{heading1}</p>
             <p className='text-base text-[#636266] font-medium text-left'>{heading2}</p>
             <hr className='my-2' />
