@@ -10,6 +10,7 @@ import Service from "./Service";
 import Testimonial from "./Testimonial";
 import TechnologyStack from "./TechnologyStack";
 import FAQs from "./FAQS";
+import GetInTouch from "../../components/GetInTouch/GetInTouch";
 
 const Landing = () => {
   const webDevStacks = [
@@ -60,6 +61,7 @@ const Landing = () => {
           <Testimonial />
           <TechnologyStack />
           <FAQs />
+          <GetInTouch/>
         </section>
       </div>
     </>

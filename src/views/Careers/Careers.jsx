@@ -43,9 +43,9 @@ const Careers = () => {
 
   return (
     <Page title="Careers">
-      <div className="bg-primary h-[40vh] flex items-center justify-center text-white flex-col">
-        <h1 className="text-6xl font-bold">We are hiring</h1>
-        <h1 className="mt-4 text-2xl font-semibold">Join Our Team</h1>
+      <div className="bg-primary h-[40vh] flex items-center justify-center  text-white flex-col">
+        <h1 className="text-4xl font-bold text-center">We are hiring</h1>
+        <h1 className="mt-4 text-2xl font-extralight text-center">Join Our Team</h1>
       </div>
 
       <div className="px-10 mx-auto my-10">

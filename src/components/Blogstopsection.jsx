@@ -5,10 +5,10 @@ import { FaSearch } from "react-icons/fa";
     return (
       <>
         <div className="bg-primary text-white flex flex-col justify-center items-center h-[50vh]">
-          <h1 className="text-center text-5xl font-bold mb-4">
+          <h1 className="text-center text-4xl font-bold mb-4">
             Saeedan Technology Blog
           </h1>
-          <p className="text-center text-4xl">
+          <p className="text-center text-2xl md:px-48">
             Blog about Technology, Business, Programming, Development, Marketing, and Artificial Intelligence
           </p>
         </div>

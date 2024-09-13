@@ -7,13 +7,13 @@ const OurPortfolio = () => {
   ];
   return (
     <div className="bg-primary pb-8 md:pb-14 lg:pb-20 pt-6 flex flex-col justify-center items-center">
-      <div className="flex flex-col justify-center items-center gap-3 lg:gap-4 xl:gap-5  p-5  md:p-16 xl:p-10">
-        <h1 className="text-xl md:text-2xl lg:text-3xl text-white">
+      <div className="flex flex-col justify-center items-center gap-3 lg:gap-4 xl:gap-5  p-5 md:p-16 xl:p-4">
+        <h1 className="text-xl md:text-2xl lg:text-4xl text-white">
           Our Portfolio
         </h1>
-        <h1 className="text-xs md:text-sm lg:text-md text-white">
+        <h1 className="text-xs md:text-sm lg:text-2xl md:px-44 text-center text-white">
           Redefine Your Business Processes With Our Powerful Automated Services.
-          Redefine Your Business Processes With Our Powerful Automated Services
+          Redefine Your Business Processes With Our Powerful Automated Services.
         </h1>
       </div>
       <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
