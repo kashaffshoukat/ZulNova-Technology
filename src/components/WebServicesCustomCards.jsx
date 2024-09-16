@@ -4,7 +4,7 @@ import { FaArrowRight } from "react-icons/fa6";
 const WebServicesCustomCards = ({program,para}) => {
   return (
     <div className='py-12'>
-     <div className="relative w-44 h-72 perspective">
+     <div className="relative w-full md:w-44 h-72 perspective">
       <div className="card-inner h-[100%] w-[100%]">
         <div className="card-front bg-white text-start border rounded-xl py-20 pl-2 shadow-lg">
           <h2 className="text-xl font-extralight border-b-2 w-[95%] border-blue-700 ">{program}</h2>

@@ -47,7 +47,7 @@ const AllBlogs = ({ blogs }) => {
                                 alt={blog.authors.length > 0 ? blog.authors[0].name : 'No Author'}
                                 className="h-12 w-12 object-cover rounded-full"
                             />
-                            <div className="flex flex-col">
+                            <div className="flex flex-col cursor-pointer">
                                 <span className="font-semibold">
                                     {blog.authors.length > 0 ? blog.authors[0].name : 'No Author Found'}
                                 </span>

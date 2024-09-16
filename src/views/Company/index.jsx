@@ -11,7 +11,9 @@ const Company = () => {
       <Unleash />
       <Problem />
       <CEO_Section />
+      <div className="py-4">
       <Set_Apart />
+      </div>
       <GetInTouch />
     </Page>
   );

@@ -2,7 +2,6 @@ import React from 'react';
 import WebServicesCustomCards from './WebServicesCustomCards';
 
 const WebServicesCards = () => {
-
     const Webdata = [
         {
             program: 'Web App Development',
@@ -36,10 +35,10 @@ const WebServicesCards = () => {
                 <h1 className='text-3xl font-extralight text-[#2e5090]'>Our Services</h1>
                 <h2 className='text-xl text-center font-semibold'>The Services we Provide</h2>
             </div>
-            <div className='flex items-center justify-center'>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6 px-4 md:px-8">
+            <div className='flex items-center justify-center w-full px-4 md:px-8'>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6 w-full">
                     {Webdata.map((data, index) => (
-                        <div key={index}>
+                        <div key={index} className="w-full">
                             <WebServicesCustomCards
                                 program={data.program}
                                 para={data.para}

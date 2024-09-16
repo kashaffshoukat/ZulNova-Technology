@@ -11,6 +11,7 @@ import Testimonial from "./Testimonial";
 import TechnologyStack from "./TechnologyStack";
 import FAQs from "./FAQS";
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
+import PortolioSlider from "./PortolioSlider";
 
 const Landing = () => {
   const webDevStacks = [
@@ -22,7 +23,7 @@ const Landing = () => {
   ];
   return (
     <>
-      <div className="px-20 py-12">
+      <div className=" px-3 md:px-20 py-12">
         <section className="bg-white">
           <div className="mx-auto flex flex-col lg:flex-row items-center">
             <div className="lg:w-1/2 mb-10 lg:mb-0 flex flex-col items-start justify-start">
@@ -58,6 +59,7 @@ const Landing = () => {
           </div>
           <Benefits />
           <Service />
+          <PortolioSlider/>
           <Testimonial />
           <TechnologyStack />
           <FAQs />

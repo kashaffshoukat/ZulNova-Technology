@@ -13,7 +13,7 @@ const BlogsDetailsComponent = () => {
       <BlogDetail2 />
       <BlogDetail3 />
       <BlogsSlider />
-      {/* <GetInTouch /> */}
+      <GetInTouch />
     </div>
   )
 }

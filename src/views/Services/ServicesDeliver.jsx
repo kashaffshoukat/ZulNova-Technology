@@ -1,60 +1,58 @@
 import React from "react";
-import { FaPhp } from "react-icons/fa";
-import { FaLaravel } from "react-icons/fa6";
-import { FaReact } from "react-icons/fa";
-import { FaShop } from "react-icons/fa6";
-import { SiWebtrees } from "react-icons/si";
-import RootDesign from "./components/RootDesign";
+import { FaPhp, FaLaravel, FaReact, FaWordpress, FaShopify, FaWix } from "react-icons/fa";
 import { FaAndroid } from "react-icons/fa";
-import { TbArrowBarBoth } from "react-icons/tb";
+import { TbArrowBarBoth, TbBrandWebflow } from "react-icons/tb";
 import { BsApple } from "react-icons/bs";
 import { RiFlutterFill } from "react-icons/ri";
 import { TiSocialAtCircular } from "react-icons/ti";
-import { FaWordpress } from "react-icons/fa";
-import { TbBrandWebflow } from "react-icons/tb";
-import { FaShopify } from "react-icons/fa";
-import { SiBotblecms } from "react-icons/si";
-import { FaWix } from "react-icons/fa";
+import { SiWebtrees, SiBotblecms } from "react-icons/si";
+import RootDesign from "./components/RootDesign";
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
+import { FaShop } from "react-icons/fa6";
 
 const ServiceItem = ({ text }) => (
   <div className="text-center">
-    <p className="font-semibold text-gray-800 underline hover:text-primary cursor-pointer">
+    <p className="font-semibold text-gray-800 underline hover:text-primary cursor-pointer text-base md:text-lg lg:text-xl">
       {text}
     </p>
   </div>
 );
+
 const services = [
-  { name: "PHP Dev", icon: <FaPhp size={65} /> },
-  { name: "Laravel Dev", icon: <FaLaravel size={65} /> },
-  { name: "React JS", icon: <FaReact size={65} /> },
-  { name: "E-Commerce Site", icon: <FaShop size={65} /> },
-  { name: "Web Portal", icon: <SiWebtrees size={65} /> },
+  { name: "PHP Dev", icon: <FaPhp size={50} /> },
+  { name: "Laravel Dev", icon: <FaLaravel size={50} /> },
+  { name: "React JS", icon: <FaReact size={50} /> },
+  { name: "E-Commerce Site", icon: <FaShop size={50} /> },
+  { name: "Web Portal", icon: <SiWebtrees size={50} /> },
 ];
+
 const app_dev = [
-  { name: "Android App", icon: <FaAndroid size={65} /> },
-  { name: "Hybrid App Dev", icon: <TbArrowBarBoth size={65} /> },
-  { name: "IOS", icon: <BsApple size={65} /> },
-  { name: "Flutter", icon: <RiFlutterFill size={65} /> },
-  { name: "Social Apps", icon: <TiSocialAtCircular size={65} /> },
+  { name: "Android App", icon: <FaAndroid size={50} /> },
+  { name: "Hybrid App Dev", icon: <TbArrowBarBoth size={50} /> },
+  { name: "IOS", icon: <BsApple size={50} /> },
+  { name: "Flutter", icon: <RiFlutterFill size={50} /> },
+  { name: "Social Apps", icon: <TiSocialAtCircular size={50} /> },
 ];
+
 const cms = [
-  { name: "Wordpress", icon: <FaWordpress size={65} /> },
-  { name: "Web Flow", icon: <TbBrandWebflow size={65} /> },
-  { name: "Shopify", icon: <FaShopify size={65} /> },
-  { name: "Custom Css", icon: <SiBotblecms size={65} /> },
-  { name: "Wix", icon: <FaWix size={65} /> },
+  { name: "Wordpress", icon: <FaWordpress size={50} /> },
+  { name: "Web Flow", icon: <TbBrandWebflow size={50} /> },
+  { name: "Shopify", icon: <FaShopify size={50} /> },
+  { name: "Custom Cms", icon: <SiBotblecms size={50} /> },
+  { name: "Wix", icon: <FaWix size={50} /> },
 ];
 
 const ServicesDeliver = () => {
   return (
-    <div>
-      <div className="flex flex-col items-center justify-center py-8 bg-[#F7F7F7]">
-        <h2 className="text-2xl font-semibold text-blue-800 mb-2">
+    <div className="px-4 md:px-6 lg:px-8 py-8 bg-[#F7F7F7]">
+      <div className="flex flex-col items-center justify-center py-8">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-blue-800 mb-2">
           Services We Deliver
         </h2>
-        <p className="text-sm text-gray-700 mb-8">Our Featured Services</p>
-        <div className="flex justify-center space-x-8">
+        <p className="text-sm md:text-base lg:text-lg text-gray-700 mb-8">
+          Our Featured Services
+        </p>
+        <div className="flex flex-wrap justify-center gap-6 mb-8">
           <ServiceItem text="Web Development" />
           <ServiceItem text="Mobile App Development" />
           <ServiceItem text="CMS Solution" />

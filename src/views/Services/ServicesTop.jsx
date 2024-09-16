@@ -1,10 +1,12 @@
 import React from "react";
 import TopSectionComponent from "../../components/TopSectionComponent";
 import Button from "../../components/Button";
-import { service1 } from '../../assets'
+import { service1 } from '../../assets';
+
 const ServicesTop = () => {
   return (
-    // <div className="px-4 md:px-20 py-8 md:py-12">
+
+     // <div className="px-4 md:px-20 py-8 md:py-12">
     //   <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
     //     <div className="md:col-span-6">
     //       <div className="p-6 rounded-lg mt-6 md:mt-20">
@@ -42,12 +44,15 @@ const ServicesTop = () => {
     //     </div>
     //   </div>
     // </div>
-    <>
-      <div className="px-4 md:px-15 py-8 md:py-12">
-
-        <TopSectionComponent head1={'We Engineer Software Solutions'} head2={'Services and Solutions at'} head3={'Saeedan Technology'} description={'Imagine a tech-powered future for your business with our guidance and expertise. Unleash the potential of innovative solutions tailored just for you.'} picture={service1} />
-      </div>
-    </>
+    <div className="px-4 md:px-8 lg:px-20 py-8 md:py-12 lg:py-16">
+      <TopSectionComponent
+        head1={'We Engineer Software Solutions'}
+        head2={'Services and Solutions at'}
+        head3={'Saeedan Technology'}
+        description={'Imagine a tech-powered future for your business with our guidance and expertise. Unleash the potential of innovative solutions tailored just for you.'}
+        picture={service1}
+      />
+    </div>
   );
 };
 

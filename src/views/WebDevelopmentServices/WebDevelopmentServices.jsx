@@ -16,8 +16,8 @@ const MobileAppServices = () => {
     <>
       <WebDevelopmentServicesTop />
       <WebServicesSlider />
-      <div className='px-20'>
         <WebServicesCards />
+      <div className='px-20'>
         <Benefits/>
         <Testimonial/>
         <TechnologyStack />

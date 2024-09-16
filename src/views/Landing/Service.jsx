@@ -76,14 +76,13 @@ const Service = () => {
     return (
         <>
             <div className='flex flex-col items-center'>
-
                 <div className='flex flex-col items-center gap-4'>
                     <h3 className='text-4xl font-bold text-primary'>Services We Deliver</h3>
                     <p className='text-2xl font-thin'>Our Featured Services</p>
                 </div>
-                <div className='grid grid-cols-12 gap-8 py-12'>
+                <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-8 py-12'>
                     {servicesData.map((service, index) => (
-                        <div key={index} className='col-span-4'>
+                        <div key={index} className='flex flex-col'>
                             <ServiceHomeCard
                                 icon={service.icon}
                                 mainHeading={service.mainHeading}
@@ -92,8 +91,7 @@ const Service = () => {
                         </div>
                     ))}
                 </div>
-                <div>
-
+                <div className='mt-8'>
                     <Button icon={<FaArrowRightLong />}>Book my Consultation Today</Button>
                 </div>
             </div>

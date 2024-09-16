@@ -49,9 +49,9 @@ const Benefits = () => {
                 <h3 className='text-4xl font-bold text-primary'>Benefits</h3>
                 <p className='text-2xl font-thin'>Working Benefits with us</p>
             </div>
-            <div className='grid grid-cols-12 gap-6 py-12'>
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-6 py-12'>
                 {benefitsData.map((benefit, index) => (
-                    <div key={index} className='col-span-6'>
+                    <div key={index} className='flex flex-col items-center'>
                         <BenefitsCard
                             icon={benefit.icon}
                             title={benefit.title}

@@ -43,7 +43,7 @@ const MainFeatures = () => {
     ];
 
     return (
-        <div className="px-20 py-12">
+        <div className="md:px-20 py-12">
             <div className='flex flex-col gap-2 items-center justify-center mb-12'>
                 <h1 className='text-2xl font-semibold'>Focus</h1>
                 <h2 className='text-[#2e50ac] text-3xl text-center'>Our Main Features</h2>

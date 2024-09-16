@@ -182,7 +182,7 @@ const TeamSlider = () => {
         <div className='py-4'>
             <div className='flex flex-col gap-2 items-center justify-center'>
                 <h1 className='text-[#2e50ac] text-3xl'>Our Team</h1>
-                <p>Our team is dedicated to delivering excellence in web development, specializing in creating solutions that exceed expectations.</p>
+                <p className='text-center'>Our team is dedicated to delivering excellence in web development, specializing in creating solutions that exceed expectations.</p>
             </div>
             {/* *********************** */}
             <div className='px-4 py-12'>

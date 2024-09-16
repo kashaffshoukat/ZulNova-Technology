@@ -25,7 +25,7 @@ const SetApart = () => {
           ))}
         </div>
       </div>
-      <p className="text-white text-md md:text-lg">
+      <p className="text-white text-center text-md md:text-lg">
         What works best for you?
         <span className="underline  underline-offset-2 hover:no-underline cursor-pointer duration-300">
           {" "}

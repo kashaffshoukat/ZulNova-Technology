@@ -15,7 +15,7 @@ const sliderSettings = {
     arrows: true,
     prevArrow: <div className="slick-arrow slick-prev text-2xl">◀</div>,
     nextArrow: <div className="slick-arrow slick-next text-2xl">▶</div>,
-    slidesToShow:2,
+    slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
@@ -25,9 +25,16 @@ const sliderSettings = {
         {
             breakpoint: 600,
             settings: {
-                slidesToShow: 3,
+                slidesToShow: 1,
                 slidesToScroll: 1,
                 centerMode: false,
+            },
+        },
+        {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
             },
         },
     ],
@@ -65,7 +72,7 @@ const Testimonial = () => {
         <div className="relative bg-lightblue py-12">
             <div className='flex flex-col items-center gap-4'>
                 <h3 className='text-4xl font-bold text-primary'>Testimonials</h3>
-                <p className='text-2xl font-thin'>What People Talk About Us</p>
+                <p className='text-2xl text-center font-thin'>What People Talk About Us</p>
             </div>
             <div className="flex flex-col md:flex-row gap-2 justify-center items-center mt-8">
                 <div className="w-full md:w-[100vw] md:h-[50vh]">
