@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { GiHamburgerMenu, GiCancel } from "react-icons/gi";
+import { FaServicestack, FaUsers, FaBuilding, FaClipboard, FaSuitcase, FaBlog } from "react-icons/fa"; // Import your desired icons
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -8,62 +9,60 @@ const Header = () => {
   const location = useLocation();
 
   const navLinks = [
-    { name: "Services", to: "/services" },
-    { name: "Team", to: "/team" },
-    { name: "Company", to: "/company" },
-    { name: "Portfolio", to: "/portfolio" },
-    { name: "Careers", to: "/careers" },
-    { name: "Blog", to: "/blog" },
+    { name: "Services", to: "/services", icon: <FaServicestack /> },
+    { name: "Team", to: "/team", icon: <FaUsers /> },
+    { name: "Company", to: "/company", icon: <FaBuilding /> },
+    { name: "Portfolio", to: "/portfolio", icon: <FaClipboard /> },
+    { name: "Careers", to: "/careers", icon: <FaSuitcase /> },
+    { name: "Blog", to: "/blog", icon: <FaBlog /> },
   ];
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setHasShadow(true);
-      } else {
-        setHasShadow(false);
-      }
+      setHasShadow(window.scrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleLinkClick = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <header
-      className={`bg-primary text-white sticky top-0 z-50 transition-shadow duration-300 ${hasShadow ? "shadow-lg" : ""}`}
+      className={`bg-primary text-white sticky md:h-24 top-0 z-50 transition-shadow duration-300 ${hasShadow ? "shadow-lg" : ""}`}
     >
-      <div className={`flex justify-between items-center py-4 px-4 ${isMenuOpen ? "transition-transform transform translate-y-0" : "transition-transform transform md:-translate-y-0 -translate-y-2"}`}>
-        {!isMenuOpen && (
-          <div className="flex items-center space-x-2">
-            <Link to="/">
-              <img src="/assets/Logo.webp" alt="Logo" className="w-16 cursor-pointer" />
-            </Link>
-          </div>
-        )}
+      <div className={`md:flex md:justify-between md:items-center py-4 md:py-0 px-4 ${isMenuOpen ? "" : "md:translate-y-4"}`}>
+        <div className="flex items-center space-x-2">
+          <Link to="/" onClick={handleLinkClick}>
+            <img src="/assets/Logo.webp" alt="Logo" className="w-16 cursor-pointer" />
+          </Link>
+        </div>
         <div className="absolute right-4 top-9 md:hidden">
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="text-white focus:outline-none"
-          >
+          <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-white focus:outline-none">
             {isMenuOpen ? <GiCancel size={24} /> : <GiHamburgerMenu size={24} />}
           </button>
         </div>
 
-        <nav className={`flex flex-col gap-5 md:flex-row md:space-x-8 py-12 ${isMenuOpen ? "block w-full  items-center" : "hidden md:flex"}`}>
-          {navLinks.map((link, index) => (
-
-            <Link
-              key={index}
-              to={link.to}
-              className={` relative group text-xl text-center transition duration-300 ${location.pathname === link.to ? "text-yellow-400" : ""}`}
-            >
-              {link.name}
-              <span
-                className={`absolute left-0 -bottom-1 w-full h-0.5 bg-yellow-400 transform transition-transform duration-300 ${location.pathname === link.to ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`}
-              ></span>
-            </Link>
-          ))}
+        <nav className={`md:flex md:items-center transition-all duration-1000 ease-in-out overflow-hidden ${isMenuOpen ? "max-h-screen" : "max-h-0"} md:max-h-full`}>
+          <div className={`flex flex-col gap-5 md:border-none border-t-2  py-4 md:py-0 md:flex-row md:space-x-8 md:mx-4`}>
+            {navLinks.map((link, index) => (
+              <Link
+                key={index}
+                to={link.to}
+                onClick={handleLinkClick}
+                className={`flex items-center relative group text-xl text-start transition duration-300 ${location.pathname === link.to ? "text-yellow-400" : ""}`}
+              >
+                <span className="mr-2 md:hidden">{link.icon}</span>
+                {link.name}
+                <span
+                  className={`absolute left-0 -bottom-1 w-28 h-0.5 bg-yellow-400 transform transition-transform duration-300 ${location.pathname === link.to ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"}`}
+                ></span>
+              </Link>
+            ))}
+          </div>
         </nav>
 
         {!isMenuOpen && (

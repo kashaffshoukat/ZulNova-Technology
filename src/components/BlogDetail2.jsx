@@ -17,15 +17,16 @@ const BlogDetail2 = ({ blogs }) => {
     };
 
     const scrollToDescription = (index) => {
-        if (boxRefs[index].current) {
+         if (boxRefs[index].current) {
             boxRefs[index].current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            setActiveIndex(index); // Update active index when scrolling
         }
     };
 
     return (
         <div className="flex h-full mb-30">
             {/* Sidebar */}
-            <div className="w-1/4 h-full p-5 sticky top-20 left-0 overflow-y-auto">
+            <div className="w-1/4 h-full p-5 sticky top-20 md:block hidden left-0 overflow-y-auto">
                 <div className="flex items-center bg-white rounded-full border border-gray-400 p-2 mb-4">
                     <input
                         type="text"
@@ -52,7 +53,7 @@ const BlogDetail2 = ({ blogs }) => {
 
             {/* Main Content */}
             <div
-                className="w-3/4 h-full overflow-y-scroll"
+                className="w-3/4 h-full text-left md:mx-0 mx-3 overflow-y-scroll"
                 onScroll={(e) => {
                     const contentBox = e.target;
                     const scrollPosition = contentBox.scrollTop;
@@ -106,7 +107,7 @@ const BlogDetail2 = ({ blogs }) => {
                 {blogs?.blog_contents?.map((heading, index) => (
                     <div key={index} ref={boxRefs[index]} className="mb-5">
                         <h2 className="text-xl font-bold" dangerouslySetInnerHTML={{ __html: heading?.title || "" }} />
-                        <p className="py-2 text-lg" dangerouslySetInnerHTML={{ __html: heading?.description || "" }} />
+                        <p className="py-2 text-sm md:text-lg" dangerouslySetInnerHTML={{ __html: heading?.description || "" }} />
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             {heading?.blog_content_images?.map((image, imgIndex) => (
                                 <div key={imgIndex} className="p-2 m-auto">

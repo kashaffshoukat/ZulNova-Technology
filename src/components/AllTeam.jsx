@@ -131,7 +131,7 @@ const data = [
   }
 ];
     return (
-        <div className='py-12'>
+        <div className='py-12 px-3'>
             <h1 className='text-4xl md:text-5xl lg:text-6xl mt-5 font-semibold text-center'>
                 Creatives and &nbsp;<span className='text-[#2e5090]'>Professionals</span>
             </h1>

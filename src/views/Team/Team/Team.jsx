@@ -8,7 +8,7 @@ import MainTeam from "./MainTeam";
 const Team = () => {
   return (
     <Page title="Saeedan Team">
-      <div className="px-8 md:py-12 py-2">
+      <div className="md:px-8 md:py-12">
 
         <TopSectionComponent description={` We're a team of makers, thinkers, and explorers. We approach
               work and play with curiosity and experimentation, using what we
@@ -16,8 +16,8 @@ const Team = () => {
               people, just like you.`} head1={'Team'} head2={'About Our'} head3={'Team'} picture={teampic} />
         <MainTeam />
         <CeoSection />
-        <AllTeam />
       </div>
+        <AllTeam />
     </Page>
   );
 };

@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { useSnackbar } from 'notistack'; // Import useSnackbar from notistack
+import { useSnackbar } from 'notistack';
 import { SnackbarProvider } from "notistack";
 
 const JobApplication = () => {

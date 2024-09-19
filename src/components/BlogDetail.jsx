@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const BlogDetail = ({blogs}) => {
 
     return (
-        <div className="p-12 mt-20">
+        <div className="md:p-12 p-3 mt-20">
             {blogs &&
                 blogs.c_t_a &&
                 blogs.c_t_a.cta_bottom_title &&
@@ -24,14 +24,14 @@ const BlogDetail = ({blogs}) => {
                             <p className="mb-6">{blogs.c_t_a.cta_top_description}</p>
                             <div className="flex gap-4">
                                 <button
-                                    className="bg-blue-600 text-white py-2 px-4 rounded text-base transition duration-200 hover:bg-blue-700 focus:outline-none"
+                                    className="bg-blue-600 text-sm md:text-base text-white py-2 px-4 rounded transition duration-200 hover:bg-blue-700 focus:outline-none"
                                     // onClick={S   crollToContact}
                                 >
                                     {blogs.c_t_a.button_one_title}
                                 </button>
                                 <Link to={blogs.c_t_a.cta_top_link} target="_blank">
                                     <button
-                                        className="border border-blue-600 text-blue-600 py-2 px-4 rounded text-base transition duration-200 hover:bg-blue-600 hover:text-white focus:outline-none"
+                                        className="border text-sm border-blue-600 text-blue-600 py-2 px-4 rounded md:text-base transition duration-200 hover:bg-blue-600 hover:text-white focus:outline-none"
                                         onClick={() => window.open(blogs.c_t_a.cta_top_link, "_blank")}
                                     >
                                         {blogs.c_t_a.button_two_title}

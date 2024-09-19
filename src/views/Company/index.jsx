@@ -6,6 +6,8 @@ import Set_Apart from "./SetApart";
 import GetInTouch from "../../components/GetInTouch/GetInTouch";
 
 const Company = () => {
+ 
+
   return (
     <Page title="Saeedan Company">
       <Unleash />

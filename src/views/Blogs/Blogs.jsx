@@ -22,7 +22,7 @@ const Blogs = () => {
   return (
     <>
       <Blogstopsection />
-      <div className='p-8'>
+      <div className='p-4'>
         <AllBlogs blogs={blogs} />
       </div>
     </>

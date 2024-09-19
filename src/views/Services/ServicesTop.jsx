@@ -44,7 +44,7 @@ const ServicesTop = () => {
     //     </div>
     //   </div>
     // </div>
-    <div className="px-4 md:px-8 lg:px-20 py-8 md:py-12 lg:py-16">
+    <div className="md:px-8 md:py-12">
       <TopSectionComponent
         head1={'We Engineer Software Solutions'}
         head2={'Services and Solutions at'}
