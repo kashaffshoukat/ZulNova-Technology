@@ -19,7 +19,7 @@ const BlogDetail2 = ({ blogs }) => {
     const scrollToDescription = (index) => {
          if (boxRefs[index].current) {
             boxRefs[index].current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            setActiveIndex(index); // Update active index when scrolling
+            setActiveIndex(index);
         }
     };
 

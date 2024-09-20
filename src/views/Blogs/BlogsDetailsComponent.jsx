@@ -7,6 +7,7 @@ import BlogDetail3 from '../../components/BlogDetail3';
 import BlogsSlider from '../../components/BlogsSlider';
 import GetInTouch from '../../components/GetInTouch/GetInTouch';
 import { getBlogs } from '../../utils/_BLOG';
+import { ClipLoader } from 'react-spinners';
 
 const BlogsDetailsComponent = () => {
   const { slug } = useParams();
@@ -35,7 +36,9 @@ const BlogsDetailsComponent = () => {
     }
   }, [slug]);
   console.log(singleBlogs, 'hiiiiii')
-  if (loading) return <p>Loading...</p>;
+  if (loading) return   <div className="flex justify-center items-center h-64">
+  <ClipLoader color="bg-primary" loading={loading} size={50} /> {/* Spinner component */}
+</div>
   if (error) return <p>{error}</p>;
 
   return (

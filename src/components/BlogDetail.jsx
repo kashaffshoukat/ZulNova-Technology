@@ -1,13 +1,10 @@
 import React from 'react';
-import { blogpic2 } from '../assets'; // Removed blogpic import as it's not used
-import Button from './Button'; // Assuming you might want to use this later
-import { RiH1 } from 'react-icons/ri'; // Not used in this code
 import { Link } from 'react-router-dom';
 
 const BlogDetail = ({blogs}) => {
 
     return (
-        <div className="md:p-12 p-3 mt-20">
+        <div className="md:p-12 p-3 ">
             {blogs &&
                 blogs.c_t_a &&
                 blogs.c_t_a.cta_bottom_title &&
@@ -16,7 +13,7 @@ const BlogDetail = ({blogs}) => {
                 blogs.c_t_a.cta_top_link &&
                 blogs.c_t_a.button_one_title &&
                 blogs.c_t_a.button_two_title && (
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-2">
                         <div>
                             <h2 className="text-2xl font-bold text-primary mb-6">
                                 {blogs.c_t_a.cta_top_title}
@@ -25,7 +22,6 @@ const BlogDetail = ({blogs}) => {
                             <div className="flex gap-4">
                                 <button
                                     className="bg-blue-600 text-sm md:text-base text-white py-2 px-4 rounded transition duration-200 hover:bg-blue-700 focus:outline-none"
-                                    // onClick={S   crollToContact}
                                 >
                                     {blogs.c_t_a.button_one_title}
                                 </button>
@@ -43,7 +39,7 @@ const BlogDetail = ({blogs}) => {
                             <img
                                 src={`https://test.saeedantechpvt.com/${blogs.c_t_a.cta_top_image}`}
                                 alt="CTA Image"
-                                className="w-72 sm:w-96 md:w-[430px] lg:w-[430px] xl:w-[430px] h-auto"
+                                className="w-full h-[30vh] object-contain"
                             />
                         </div>
                     </div>
