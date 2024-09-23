@@ -26,7 +26,7 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleLinkClick = () => {
+  const handleLinkClick = () => { 
     setIsMenuOpen(false);
   };
 
