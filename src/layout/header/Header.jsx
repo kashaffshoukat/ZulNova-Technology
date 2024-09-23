@@ -1,7 +1,16 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { GiHamburgerMenu, GiCancel } from "react-icons/gi";
-import { FaServicestack, FaUsers, FaBuilding, FaClipboard, FaSuitcase, FaBlog } from "react-icons/fa"; // Import your desired icons
+import {
+  FaServicestack,
+  FaUsers,
+  FaBuilding,
+  FaClipboard,
+  FaSuitcase,
+  FaBlog,
+} from "react-icons/fa"; // Import your desired icons
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,17 +41,35 @@ const Header = () => {
 
   return (
     <header
-      className={`bg-primary text-white sticky md:h-24 top-0 z-50 transition-shadow duration-300 ${hasShadow ? "shadow-lg" : ""}`}
+      className={`bg-primary text-white sticky md:h-24 top-0 z-50 transition-shadow duration-300 ${
+        hasShadow ? "shadow-lg" : ""
+      }`}
     >
-      <div className={`md:flex md:justify-between md:items-center py-4 md:py-0 px-4 ${isMenuOpen ? "" : "md:translate-y-4"}`}>
+      <div
+        className={`md:flex md:justify-between md:items-center py-4 md:py-0 px-4 ${
+          isMenuOpen ? "" : "md:translate-y-4"
+        }`}
+      >
         <div className="flex items-center space-x-2">
           <Link to="/" onClick={handleLinkClick}>
-            <img src="/assets/Logo.webp" alt="Logo" className="w-16 cursor-pointer" />
+            <LazyLoadImage
+              src="/assets/Logo.webp"
+              effect="blur"
+              className="w-16 cursor-pointer"
+              alt="Logo"
+            />
           </Link>
         </div>
         <div className="absolute right-4 top-9 md:hidden">
-          <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-white focus:outline-none">
-            {isMenuOpen ? <GiCancel size={24} /> : <GiHamburgerMenu size={24} />}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="text-white focus:outline-none"
+          >
+            {isMenuOpen ? (
+              <GiCancel size={24} />
+            ) : (
+              <GiHamburgerMenu size={24} />
+            )}
           </button>
         </div>
 
