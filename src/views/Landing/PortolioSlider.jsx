@@ -118,7 +118,7 @@ const PortolioSlider = () => {
         </button>
         <button
           onClick={handleNext}
-          className="absolute cursor-pointer right-12 shadow-6 bg-white md:top-1/3 top-1/4 text-primary  p-3 bg-gray-800 rounded-full text-lg transform -translate-y-1/2"
+          className="absolute cursor-pointer -right-2 shadow-6 bg-white md:top-1/3 top-1/4 text-primary  p-3 bg-gray-800 rounded-full text-lg transform -translate-y-1/2"
         >
           <FaAngleRight />
         </button>

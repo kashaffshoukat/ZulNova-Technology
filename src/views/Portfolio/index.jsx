@@ -6,7 +6,7 @@ const Portfolio = () => {
   return (
     <Page title="Saeedan Portfolio">
    
-      <CustomTopComponent title1={'Our Portfolio'} description={'Redefine Your Business Processes With Our Powerful Automated Services. Redefine Your Business Processes With Our Powerful Automated Services.'} btnLabel={'Contact Us'} />
+      <CustomTopComponent title1={'Our Portfolio'} description={'Redefine Your Business Processes With Our Powerful Automated Services.'} btnLabel={'Contact Us'} />
       <LatestProjects />
     </Page>
   );
