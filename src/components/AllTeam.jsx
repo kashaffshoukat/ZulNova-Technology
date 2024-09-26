@@ -3,133 +3,133 @@ import CustomTeamCard from './CustomTeamCard';
 import { ali, amir, anas, daniyal, fida, hamza, haseeb, moaz, mudasser, murtaza, rohan, salam, shahbaz, usama, zubair, pmbg, react, laravel, react2, hamzabg, python, salambg, amirbg, wajidbg, irfan, wajid } from '../assets';
 
 const AllTeam = () => {
-   
-const data = [
-  {
-      image: rohan,
-      name: 'Ruhan Ahmad',
-      position: 'Sr.Project Manager',
-      backgroundColor: '#D03AE9',
-      backgroundImage: pmbg,
-  },
-  {
-      image: mudasser,
-      name: 'Syed Muddasar Anayat',
-      position: 'Sr.React JS Developer',
-      backgroundColor:'#314252',
-      backgroundImage:react
-  },
-  {
-      image: anas,
-      name: 'Muhammad Anas',
-      position: 'Sr.Laravel Developer',
-      backgroundColor: '#F005BC',
-      backgroundImage:laravel
 
-  },
-  {
-      image: amir,
-      name: 'Muhammad Amir',
-      position: 'Sr.Laravel Developer',
-      backgroundColor: '#C8CBFF',
-      backgroundImage:amirbg
+    const data = [
+        {
+            image: rohan,
+            name: 'Ruhan Ahmad',
+            position: 'Sr.Project Manager',
+            backgroundColor: '#D03AE9',
+            backgroundImage: pmbg,
+        },
+        {
+            image: mudasser,
+            name: 'Syed Muddasar Anayat',
+            position: 'Sr.React JS Developer',
+            backgroundColor: '#3142C5',
+            backgroundImage: react
+        },
+        {
+            image: anas,
+            name: 'Muhammad Anas',
+            position: 'Sr.Laravel Developer',
+            backgroundColor: '#F005BC',
+            backgroundImage: laravel
 
-  },
-  {
-      image: moaz,
-      name:'Muhammad Moaz',
-      position:'React JS Developer',
-      backgroundColor:'#0f3574',
-      backgroundImage:react2
+        },
+        {
+            image: amir,
+            name: 'Muhammad Amir',
+            position: 'Sr.Laravel Developer',
+            backgroundColor: '#C8CBFF',
+            backgroundImage: amirbg
 
-  },
-  {
-      image: ali,
-      name: 'Ali Husnain',
-      position: 'Laravel Developer',
-      backgroundColor: '#c8cbff',
-      backgroundImage:amirbg
+        },
+        {
+            image: moaz,
+            name: 'Muhammad Moaz',
+            position: 'React JS Developer',
+            backgroundColor: '#0f3574',
+            backgroundImage: react2
 
-  },
-  {
-      image: salam,
-      name: 'Abdul Salam',
-      position: 'Project Manager/Flutter Developer',
-      backgroundColor: '#05f0bc',
-      backgroundImage:salambg
+        },
+        {
+            image: ali,
+            name: 'Ali Husnain',
+            position: 'Laravel Developer',
+            backgroundColor: '#c8cbff',
+            backgroundImage: amirbg
 
-  },
-  {
-      image: hamza,
-      name: 'Hamza Yasin',
-      position: 'UI UX Designer',
-      backgroundColor: '#008dad',
-      backgroundImage:hamzabg
+        },
+        {
+            image: salam,
+            name: 'Abdul Salam',
+            position: 'Project Manager/Flutter Developer',
+            backgroundColor: '#05f0bc',
+            backgroundImage: salambg
 
-  },
-  {
-      image: daniyal,
-      name: 'Muhammad Daniyal',
-      position: 'React JS Developer',
-      backgroundColor: '#fc9d1a',
-      backgroundImage:react
+        },
+        {
+            image: hamza,
+            name: 'Hamza Yasin',
+            position: 'UI UX Designer',
+            backgroundColor: '#008dad',
+            backgroundImage: hamzabg
 
-  },
-  {
-      image: shahbaz,
-      name: 'Shahbaz Ali',
-      position: 'Laravel Developer',
-      backgroundColor: '#314252',
-      backgroundImage:laravel
+        },
+        {
+            image: daniyal,
+            name: 'Muhammad Daniyal',
+            position: 'React JS Developer',
+            backgroundColor: '#fc9d1a',
+            backgroundImage: react
 
-  },
-  {
-      image: zubair,
-      name: 'Muhammad Zubair',
-      position: 'React JS Developer',
-      backgroundColor: '#27283d',
-      backgroundImage:react2
+        },
+        {
+            image: shahbaz,
+            name: 'Shahbaz Ali',
+            position: 'Laravel Developer',
+            backgroundColor: '#314252',
+            backgroundImage: laravel
 
-  },
-  {
-      image: irfan,
-      name: 'Irfan Ali',
-      position: 'React JS Developer',
-      backgroundColor: '#0f3574',
-      backgroundImage:react
+        },
+        {
+            image: zubair,
+            name: 'Muhammad Zubair',
+            position: 'React JS Developer',
+            backgroundColor: '#27283d',
+            backgroundImage: react2
 
-  },
-  {
-      image: fida,
-      name: 'Fida Hussain',
-      position: 'Python Developer',
-      backgroundColor: '#B0B53E',
-      backgroundImage:python
+        },
+        {
+            image: irfan,
+            name: 'Irfan Ali',
+            position: 'React JS Developer',
+            backgroundColor: '#0f3574',
+            backgroundImage: react
 
-  },
-  {
-      image: murtaza,
-      name: 'Ghulam Murtaza',
-      position: 'Flutter Developer',
-      backgroundColor: '#3357FF',
-      backgroundImage:salambg
+        },
+        {
+            image: fida,
+            name: 'Fida Hussain',
+            position: 'Python Developer',
+            backgroundColor: '#B0B53E',
+            backgroundImage: python
 
-  },
-  {
-      image: wajid,
-      name: 'Wajid Ali',
-      position: 'Cheif Marketing Officer',
-      backgroundColor: '#008dad',
-      backgroundImage:wajidbg
-  },
-  {
-      image: haseeb,
-      name: 'Haseeb Mushtaq',
-      position: 'Laravel Developer',
-      backgroundColor: '#ebc182',
-      backgroundImage:amirbg
-  }
-];
+        },
+        {
+            image: murtaza,
+            name: 'Ghulam Murtaza',
+            position: 'Flutter Developer',
+            backgroundColor: '#3357FF',
+            backgroundImage: salambg
+
+        },
+        {
+            image: wajid,
+            name: 'Wajid Ali',
+            position: 'Cheif Marketing Officer',
+            backgroundColor: '#008dad',
+            backgroundImage: wajidbg
+        },
+        {
+            image: haseeb,
+            name: 'Haseeb Mushtaq',
+            position: 'Laravel Developer',
+            backgroundColor: '#ebc182',
+            backgroundImage: amirbg
+        }
+    ];
     return (
         <div className='py-12 px-3'>
             <h1 className='text-4xl md:text-5xl lg:text-6xl mt-5 font-semibold text-center'>
