@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Card = ({ service }) => {
+const Card = React.memo(({ service }) => {
   const [isHover, setIsHover] = useState(false);
 
   return (
@@ -10,7 +10,9 @@ const Card = ({ service }) => {
       onMouseLeave={() => setIsHover(false)}
     >
       <div className="mr-2 text-primary">{service.icon}</div>
-      <p className="font-semibold cursor-pointer text-gray-800 text-2xl">{service.name}</p>
+      <p className="font-semibold cursor-pointer text-gray-800 text-2xl">
+        {service.name}
+      </p>
 
       {/* Tooltip */}
       {isHover && (
@@ -20,6 +22,8 @@ const Card = ({ service }) => {
       )}
     </div>
   );
-};
+});
+
+Card.displayName = "ServiceCard";
 
 export default Card;

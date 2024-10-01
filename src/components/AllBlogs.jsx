@@ -1,80 +1,102 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import { FaSearch } from "react-icons/fa";
-import { Link } from 'react-router-dom';
-import { ClipLoader } from 'react-spinners';
+import { Link } from "react-router-dom";
+import { ClipLoader } from "react-spinners";
 
-const AllBlogs = ({ blogs }) => {
-    const [loading, setLoading] = useState(true);
-    const imageUrl = 'https://test.saeedantechpvt.com/';
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
-    useEffect(() => {
-        if (blogs.length > 0) {
-            setLoading(false);
-        }
-    }, [blogs]);
+const AllBlogs = React.memo(({ blogs }) => {
+  const [loading, setLoading] = useState(true);
+  const imageUrl = "https://test.saeedantechpvt.com/";
 
-    return (
-        <>
-            <div className="flex flex-col sm:flex-row justify-between items-center gap-4 py-5">
-                <div className="flex-1">
-                    <h2 className="text-2xl sm:text-4xl font-bold">Latest Blog Posts</h2>
-                </div>
-                <div className="flex-shrink-0">
-                    <div className="flex items-center bg-white rounded-full border border-gray-400">
-                        <input
-                            placeholder="Search..."
-                            type="text"
-                            className="p-2 text-gray-600 rounded-full focus:outline-none flex-grow"
-                        />
-                        <div className="p-2">
-                            <FaSearch className="text-gray-400" />
-                        </div>
-                    </div>
-                </div>
+  useEffect(() => {
+    if (blogs.length > 0) {
+      setLoading(false);
+    }
+  }, [blogs]);
+
+  return (
+    <>
+      <div className="flex flex-col sm:flex-row justify-between items-center gap-4 py-5">
+        <div className="flex-1">
+          <h2 className="text-2xl sm:text-4xl font-bold">Latest Blog Posts</h2>
+        </div>
+        <div className="flex-shrink-0">
+          <div className="flex items-center bg-white rounded-full border border-gray-400">
+            <input
+              placeholder="Search..."
+              type="text"
+              className="p-2 text-gray-600 rounded-full focus:outline-none flex-grow"
+            />
+            <div className="p-2">
+              <FaSearch className="text-gray-400" />
             </div>
+          </div>
+        </div>
+      </div>
 
-            {loading ? (
-                <div className="flex justify-center items-center h-64">
-                    <ClipLoader color="bg-primary" loading={loading} size={50} /> {/* Spinner component */}
+      {loading ? (
+        <div className="flex justify-center items-center h-64">
+          <ClipLoader color="bg-primary" loading={loading} size={50} />{" "}
+          {/* Spinner component */}
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:py-8 h-full">
+          {blogs.map((blog, index) => (
+            <Link key={index} to={`/blog/${blog.slug_url}`}>
+              <div className="bg-white p-5 rounded-lg shadow-lg transition-transform transform hover:scale-105 h-full">
+                <img
+                  src={`${imageUrl}${blog.img}`}
+                  alt={blog.img_alt_text}
+                  className="h-40 w-full object-cover rounded-lg mb-4"
+                  loading="lazy"
+                />
+
+                <p className="text-lg font-semibold text-left mb-2">
+                  {blog.title}
+                </p>
+                <div
+                  className="text-sm text-gray-600 font-medium text-left mb-4 line-clamp-2"
+                  dangerouslySetInnerHTML={{ __html: blog.description }}
+                />
+                <hr className="my-2" />
+                <div className="flex items-center gap-3 mt-3">
+                  <LazyLoadImage
+                    src={
+                      blog.authors.length > 0
+                        ? `${imageUrl}${blog.authors[0].img}`
+                        : ""
+                    }
+                    alt={
+                      blog.authors.length > 0
+                        ? blog.authors[0].name
+                        : "No Author"
+                    }
+                    className="h-12 w-12 object-cover rounded-full"
+                    effect="blur" // Optional effect for lazy loading
+                  />
+
+                  <div className="flex flex-col cursor-pointer">
+                    <span className="font-semibold">
+                      {blog.authors.length > 0
+                        ? blog.authors[0].name
+                        : "No Author Found"}
+                    </span>
+                    <span className="text-xs text-gray-500">
+                      {blog.authors.length > 0 ? blog.authors[0].position : ""}
+                    </span>
+                  </div>
                 </div>
-            ) : (
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:py-8 h-full">
-                    {blogs.map((blog, index) => (
-                        <Link key={index} to={`/blog/${blog.slug_url}`}>
-                            <div className="bg-white p-5 rounded-lg shadow-lg transition-transform transform hover:scale-105 h-full">
-                                <img
-                                    src={`${imageUrl}${blog.img}`}
-                                    alt={blog.img_alt_text}
-                                    className="h-40 w-full object-cover rounded-lg mb-4"
-                                />
-                                <p className="text-lg font-semibold text-left mb-2">{blog.title}</p>
-                                <div
-                                    className="text-sm text-gray-600 font-medium text-left mb-4 line-clamp-2"
-                                    dangerouslySetInnerHTML={{ __html: blog.description }}
-                                />
-                                <hr className="my-2" />
-                                <div className="flex items-center gap-3 mt-3">
-                                    <img
-                                        src={blog.authors.length > 0 ? `${imageUrl}${blog.authors[0].img}` : ''}
-                                        alt={blog.authors.length > 0 ? blog.authors[0].name : 'No Author'}
-                                        className="h-12 w-12 object-cover rounded-full"
-                                    />
-                                    <div className="flex flex-col cursor-pointer">
-                                        <span className="font-semibold">
-                                            {blog.authors.length > 0 ? blog.authors[0].name : 'No Author Found'}
-                                        </span>
-                                        <span className="text-xs text-gray-500">
-                                            {blog.authors.length > 0 ? blog.authors[0].position : ''}
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </Link>
-                    ))}
-                </div>
-            )}
-        </>
-    );
-}
+              </div>
+            </Link>
+          ))}
+        </div>
+      )}
+    </>
+  );
+});
+
+AllBlogs.displayName = "AllBlogs";
 
 export default AllBlogs;

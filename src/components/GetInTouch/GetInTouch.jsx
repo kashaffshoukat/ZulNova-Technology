@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaLock } from "react-icons/fa";
-import { useSnackbar } from 'notistack';
+import { useSnackbar } from "notistack";
 import { SnackbarProvider } from "notistack";
 
 const countryCodes = [
@@ -199,8 +199,6 @@ const countryCodes = [
   { code: "+967", name: "Yemen" },
 ];
 
-
-
 const GetInTouch = () => {
   const { enqueueSnackbar } = useSnackbar();
   const [formData, setFormData] = useState({
@@ -222,23 +220,37 @@ const GetInTouch = () => {
     setLoading(true);
 
     try {
-      const response = await fetch("https://test.saeedantechpvt.com/api/UserContactUs", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "https://test.saeedantechpvt.com/api/UserContactUs",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
 
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
 
       await response.json();
-      enqueueSnackbar("Your message has been sent successfully!", { variant: "success" });
-      setFormData({ name: "", email: "", phone: "", message: "", countryCode: "+92" });
+      enqueueSnackbar("Your message has been sent successfully!", {
+        variant: "success",
+      });
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+        countryCode: "+92",
+      });
     } catch (error) {
-      enqueueSnackbar("There was an error sending your message. Please try again.", { variant: "error" });
+      enqueueSnackbar(
+        "There was an error sending your message. Please try again.",
+        { variant: "error" }
+      );
     } finally {
       setLoading(false);
     }
@@ -351,8 +363,9 @@ const GetInTouch = () => {
               <div>
                 <button
                   type="submit"
-                  className={`px-6 py-3 bg-primary text-white font-medium rounded-md shadow-sm hover:bg-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 ${loading ? "opacity-50 cursor-not-allowed" : ""
-                    }`}
+                  className={`px-6 py-3 bg-primary text-white font-medium rounded-md shadow-sm hover:bg-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 ${
+                    loading ? "opacity-50 cursor-not-allowed" : ""
+                  }`}
                   disabled={loading}
                 >
                   {loading ? "Sending..." : "Book My Consultation"}

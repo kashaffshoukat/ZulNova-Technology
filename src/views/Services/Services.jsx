@@ -1,4 +1,3 @@
-import React from "react";
 import Page from "../../components/page";
 import ServicesTop from "./ServicesTop";
 import ServicesDeliver from "./ServicesDeliver";
