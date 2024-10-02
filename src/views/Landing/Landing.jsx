@@ -29,7 +29,7 @@ const Landing = () => {
             className="absolute inset-0 bg-cover bg-center overflow-hidden"
             style={{ backgroundImage: `url(${landingbg2})` }}
           >
-            <div className="absolute inset-0 bg-blue-950 opacity-40" />
+            <div className="absolute inset-0 bg-blue-950 opacity-70" />
           </div>
 
           {/* Heading */}
