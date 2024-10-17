@@ -1,3 +1,5 @@
+import React, { useState, useEffect, useRef } from 'react';
+
 const SetApart = () => {
   const setAparts = [
     "Our unparalleled innovation distinguishes us from the competition.",
@@ -5,9 +7,52 @@ const SetApart = () => {
     "Exceptional customer service is what truly defines our unique position.",
   ];
 
+  const numbers = [15, 50, 100];
+  const [counts, setCounts] = useState(Array(numbers.length).fill(0));
+  const sectionRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!isVisible) return;
+
+    const interval = setInterval(() => {
+      setCounts(prevCounts => 
+        prevCounts.map((count, index) => 
+          count < numbers[index] ? count + 1 : count
+        )
+      );
+    }, 30);
+
+    return () => clearInterval(interval);
+  }, [isVisible]);
+
   return (
-    <div className="bg-primary pb-5 md:pb-6 lg:pb-9 pt-4 flex flex-col justify-center items-center">
-      <div className="flex flex-col justify-center items-center gap-6 xl:gap-10 p-10  md:p-16 xl:p-20">
+    <div 
+      ref={sectionRef}
+      className="bg-primary pb-5 md:pb-6 lg:pb-9 pt-4 flex flex-col justify-center items-center"
+    >
+      <div className="flex flex-col justify-center items-center gap-6 xl:gap-10 p-10 md:p-16 xl:p-20">
         <h1 className="text-2xl md:text-3xl lg:text-5xl text-white">
           What Sets Us Apart?
         </h1>
@@ -18,7 +63,7 @@ const SetApart = () => {
               className="flex flex-col items-center justify-center p-2 md:p-4"
             >
               <h1 className="font-semibold text-lg md:text-xl lg:text-2xl text-white">
-                15+
+                {counts[index]}+
               </h1>
               <p className="text-white text-center">{apart}</p>
             </div>
@@ -27,9 +72,8 @@ const SetApart = () => {
       </div>
       <p className="text-white text-center text-md md:text-lg">
         What works best for you?
-        <span className="underline  underline-offset-2 hover:no-underline cursor-pointer duration-300">
-          {" "}
-          Explore More
+        <span className="underline underline-offset-2 hover:no-underline cursor-pointer duration-300">
+          {" "}Explore More
         </span>
       </p>
     </div>
