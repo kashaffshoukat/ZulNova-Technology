@@ -7,9 +7,9 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 
 import { Link, useNavigate } from "react-router-dom";
 const Footer = () => {
-  const navigate =useNavigate()
+  const navigate = useNavigate()
 
-  const gohome=()=>{
+  const gohome = () => {
     navigate('/')
   }
   return (
@@ -23,10 +23,10 @@ const Footer = () => {
           alt="Logo"
         />
         <div className="flex items-center">
-          <a href="https://www.linkedin.com/company/saeedan-technology-pvt-ltd/posts/" target="_blank"><FaLinkedin  size={25} className="cursor-pointer mx-4" /></a>
-         <a href="https://www.facebook.com/saeedantechnologyofficial" target="_blank"><FaFacebook  size={25} className="cursor-pointer mx-4" /></a>
-         <a href="https://www.instagram.com/saeedantechnology/" target="_blank"><FaInstagram size={25} className="cursor-pointer mx-4" /></a>
-         <a href="https://www.pinterest.com/saeedantechnology/" target="_blank"><FaPinterest size={25} className="cursor-pointer mx-4" /></a>
+          <a href="https://www.linkedin.com/company/saeedan-technology-pvt-ltd/posts/" target="_blank"><FaLinkedin size={25} className="cursor-pointer mx-4" /></a>
+          <a href="https://www.facebook.com/saeedantechnologyofficial" target="_blank"><FaFacebook size={25} className="cursor-pointer mx-4" /></a>
+          <a href="https://www.instagram.com/saeedantechnology/" target="_blank"><FaInstagram size={25} className="cursor-pointer mx-4" /></a>
+          <a href="https://www.pinterest.com/saeedantechnology/" target="_blank"><FaPinterest size={25} className="cursor-pointer mx-4" /></a>
 
         </div>
       </div>
@@ -76,7 +76,7 @@ const Footer = () => {
             </li>
             <li>
               <Link to="/company" className="hover:text-gray-300">
-             Company
+                Company
               </Link>
             </li>
             <li>
@@ -86,12 +86,12 @@ const Footer = () => {
             </li>
             <li>
               <Link to="/careers" className="hover:text-gray-300">
-              Careers
+                Careers
               </Link>
             </li>
             <li>
               <Link to="/blog" className="hover:text-gray-300">
-              Blog
+                Blog
               </Link>
             </li>
           </ul>
@@ -101,8 +101,9 @@ const Footer = () => {
 
       <div className="border-t border-white mt-8 py-4">
         <div className="container mx-auto flex justify-center items-center">
-          <p>&copy; 2024 | All rights reserved</p>
+          <p>&copy; {new Date().getFullYear()} | All rights reserved</p>
         </div>
+
       </div>
     </footer>
   );

@@ -1,6 +1,6 @@
 import React from 'react';
 import CustomTeamCard from './CustomTeamCard';
-import { ali, amir, anas, daniyal, fida, hamza, haseeb, moaz, mudasser, murtaza, rohan, salam, shahbaz, usama, zubair, pmbg, react, laravel, react2, hamzabg, python, salambg, amirbg, wajidbg, irfan, wajid, newpic, newpic2, bdbg, mehboob, graphic } from '../assets';
+import { ali, amir, anas, daniyal, fida, hamza, haseeb, moaz, mudasser, murtaza, rohan, salam, shahbaz, usama, zubair, pmbg, react, laravel, react2, hamzabg, python, salambg, amirbg, wajidbg, irfan, wajid, newpic, newpic2, bdbg, mehboob, graphic, tahoor, alizulqarnain, aimlbg, ubaid, bddbg, zumra } from '../assets';
 
 const AllTeam = () => {
 
@@ -43,6 +43,14 @@ const AllTeam = () => {
             backgroundImage: amirbg
 
         },
+         {
+            image: hamza,
+            name: 'Hamza Yasin',
+            position: 'UI UX Designer',
+            backgroundColor: '#008dad',
+            backgroundImage: hamzabg
+
+        },
         {
             image: salam,
             name: 'Abdul Salam',
@@ -51,14 +59,7 @@ const AllTeam = () => {
             backgroundImage: salambg
 
         },
-        {
-            image: hamza,
-            name: 'Hamza Yasin',
-            position: 'UI UX Designer',
-            backgroundColor: '#008dad',
-            backgroundImage: hamzabg
-
-        },
+       
         {
             image: zubair,
             name: 'Muhammad Zubair',
@@ -76,12 +77,34 @@ const AllTeam = () => {
 
         },
         {
-            image: mehboob,
-            name: 'Mehboob Azhar',
+            image: alizulqarnain,
+            name: 'Ali Zulqarnain',
             position: 'Graphic Designer',
-            backgroundColor: '#f7e8e8',
-            backgroundImage: graphic
-        }
+            backgroundColor: '#021e4b',
+            backgroundImage: aimlbg
+        },
+         {
+            image: ubaid,
+            name: 'Muhammad Tahoor',
+            position: 'Business Developer',
+            backgroundColor: "#282828",
+            backgroundImage: bdbg
+        },
+        {
+            image: tahoor,
+            name: 'Ubaid ur rehman',
+            position: 'Business Developer',
+            backgroundColor: "#000000",
+            backgroundImage: bddbg
+        },
+         {
+            image: zumra,
+            name: 'Zumra Majeed',
+            position: 'Hr Executive',
+            backgroundColor: "#000000",
+            backgroundImage: bddbg
+        },
+        
     ];
     return (
         <div className='py-12 px-3'>

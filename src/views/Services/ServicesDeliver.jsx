@@ -64,7 +64,7 @@ const ServicesDeliver = () => {
   const getInTouchRef = useRef(null);
 
   const scrollToGetInTouch = () => {
-    getInTouchRef.current.scrollIntoView({ behavior: "smooth"  });
+    getInTouchRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -82,7 +82,8 @@ const ServicesDeliver = () => {
           <ServiceItem text="CMS Solution" />
           <ServiceItem text="Digital Marketing" />
           <ServiceItem text="UI/UX Design" />
-          <ServiceItem text="Custom Software Dev" />
+          <ServiceItem text="Custom Software Development" />
+          <ServiceItem text="AI/ML Development" />
         </div>
         <RootDesign
           services={services}
@@ -115,13 +116,13 @@ const ServicesDeliver = () => {
         </div>
         <RootDesign
           services={mls}
-          title="Machine Learning"
+          title="Artificial Intelligence / Machine Learning"
           sub="Services"
-          btn={<button   onClick={scrollToGetInTouch}>Book Our MLS Solution Services</button>}
+          btn={<button onClick={scrollToGetInTouch}>Book Our MLS Solution Services</button>}
         />
       </div>
       <div ref={getInTouchRef}>
-      <GetInTouch />
+        <GetInTouch />
       </div>
     </div>
   );

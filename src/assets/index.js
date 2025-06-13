@@ -54,6 +54,12 @@ import landingbg2 from "./lbg.jpg";
 import Landingbg3 from "./lbg2.jpg";
 import mehboob from './mehboob.png'
 import graphic from './graphic.jpg'
+import tahoor from './tahoor.png'
+import alizulqarnain from './alizulqarnain.png'
+import aimlbg from './alimlbg.jpeg'
+import ubaid from './ubaid.png'
+import bddbg from './bddbg.jpg'
+import zumra from './zumra.png'
 export {
   teampic,
   teamAll,
@@ -109,4 +115,10 @@ export {
   bdbg,
   landingbg2,
   Landingbg3,
+  tahoor,
+  alizulqarnain,
+  aimlbg,
+  ubaid,
+  bddbg,
+  zumra
 };

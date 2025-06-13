@@ -11,7 +11,7 @@ const LatestProjects = React.memo(({ onFetch }) => {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
   // Static categories including "All"
-  const categories = ["All", "MOBILE APP", "WEB APP", "CRM"];
+  const categories = ["All", "MOBILE APP", "WEB APP", "CRM", "Ai/ML"];
 
   const getAllPortfoliosProjects = async () => {
     try {
@@ -22,7 +22,7 @@ const LatestProjects = React.memo(({ onFetch }) => {
       } = res;
       if (success) {
         setPortFolios(payload);
-        setFilteredPortfolios(payload);  
+        setFilteredPortfolios(payload);
         onFetch(payload);
       } else {
         console.error(message);
@@ -134,30 +134,30 @@ const LatestProjects = React.memo(({ onFetch }) => {
 
               {/* button */}
               <div className="p-5 flex items-center justify-between">
-  {portFolio?.banner_image && (
-    <a
-      className="text-white bg-primary rounded-md px-5 py-2 max-w-max"
-      href={`https://test.saeedantechpvt.com/${portFolio.banner_image}`}
-      target="_blank"
-      rel="noopener noreferrer"
-      style={{ textDecoration: "none", color: "white" }}
-    >
-    Case Study
-    </a>
-  )}
+                {portFolio?.banner_image && (
+                  <a
+                    className="text-white bg-primary rounded-md px-5 py-2 max-w-max"
+                    href={`https://test.saeedantechpvt.com/${portFolio.banner_image}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ textDecoration: "none", color: "white" }}
+                  >
+                    Case Study
+                  </a>
+                )}
 
-  {portFolio?.project_url && (
-    <a
-      className="text-white bg-primary rounded-md px-5 py-2 max-w-max"
-      href={portFolio.project_url}
-      target="_blank"
-      rel="noopener noreferrer"
-      style={{ textDecoration: "none", color: "white" }}
-    >
-      View Project
-    </a>
-  )}
-</div>
+                {portFolio?.project_url && (
+                  <a
+                    className="text-white bg-primary rounded-md px-5 py-2 max-w-max"
+                    href={portFolio.project_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ textDecoration: "none", color: "white" }}
+                  >
+                    View Project
+                  </a>
+                )}
+              </div>
 
             </div>
           ))
