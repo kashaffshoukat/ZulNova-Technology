@@ -2,7 +2,6 @@ import teampic from './teamMain.webp'
 import teamAll from './teamAll.jpg'
 import bgPint from './bg.jpg.png'
 import atif from './atif.png'
-import rohan from './Ruhan.png'
 import pmbg from './pmbg.png'
 import mudasser from './muddaser.png'
 import anas from './anas.png'
@@ -66,7 +65,6 @@ export {
   teamAll,
   bgPint,
   atif,
-  rohan,
   pmbg,
   mudasser,
   anas,
