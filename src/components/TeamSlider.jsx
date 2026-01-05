@@ -6,7 +6,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import CustomTeamCard from '../components/CustomTeamCard'
 import { FaAngleRight } from "react-icons/fa";
 import { FaAngleLeft } from "react-icons/fa";
-import { ali, amir, amirbg, anas, daniyal, fida, hamza, hamzabg, haseeb, irfan, laravel, moaz, mudasser, murtaza, pmbg, python, react, react2, rohan, salam, salambg, shahbaz, wajid, wajidbg, zubair } from '../assets';
+import { ali, amir, amirbg, anas, daniyal, fida, hamza, hamzabg, haseeb, irfan, laravel, moaz, mudasser, murtaza, pmbg, python, react, react2, salam, salambg, shahbaz, wajid, wajidbg, zubair } from '../assets';
 
 
 
@@ -40,13 +40,7 @@ const TeamSlider = () => {
     const settings = getSliderSettings();
 
     const cardData = [
-        {
-            image: rohan,
-            name: 'Ruhan Ahmad',
-            position: 'Sr.Project Manager',
-            backgroundColor: '#D03AE9',
-            backgroundImage: pmbg,
-        },
+       
         {
             image: mudasser,
             name: 'Syed Muddasar Anayat',
